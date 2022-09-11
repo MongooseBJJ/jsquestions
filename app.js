@@ -5,6 +5,12 @@ questions.forEach(function(question) {
     // console.log(question);
     const btn = question.querySelector('.question-btn');
     btn.addEventListener('click', function() {
+        // item = same as question
+        questions.forEach(function(item) {
+            if (item !== question) {
+                item.classList.remove('show-text');
+            };
+        });
         question.classList.toggle('show-text');
     });
 });
