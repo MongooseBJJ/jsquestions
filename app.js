@@ -1,12 +1,16 @@
-const question = document.querySelector(".question-text");
-const plusBtn = document.querySelector(".plus-icon");
-const minusBtn = document.querySelector(".minus-icon");
+const btns = document.querySelectorAll('.question-btn');
 
-
-plusBtn.addEventListener('click', function() {
-    question.classList.add('show-text');
+btns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+        const question = e.currentTarget.parentElement.parentElement
+        question.classList.toggle('show-text');
+    });
 });
 
-minustBtn.addEventListener('click', function() {
-    question.classList.remove('show-text');
-});
+// plusBtn.addEventListener('click', function() {
+//     question.classList.add('show-text');
+// });
+
+// minustBtn.addEventListener('click', function() {
+//     question.classList.remove('show-text');
+// });
