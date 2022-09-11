@@ -1,16 +1,21 @@
-const btns = document.querySelectorAll('.question-btn');
+//using selectors inside the element
+const questions = document.querySelectorAll('.question');
 
-btns.forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-        const question = e.currentTarget.parentElement.parentElement
+questions.forEach(function(question) {
+    // console.log(question);
+    const btn = question.querySelector('.question-btn');
+    btn.addEventListener('click', function() {
         question.classList.toggle('show-text');
     });
 });
 
-// plusBtn.addEventListener('click', function() {
-//     question.classList.add('show-text');
-// });
 
-// minustBtn.addEventListener('click', function() {
-//     question.classList.remove('show-text');
+
+// const btns = document.querySelectorAll('.question-btn');
+
+// btns.forEach(function(btn) {
+//     btn.addEventListener('click', function(e) {
+//         const question = e.currentTarget.parentElement.parentElement
+//         question.classList.toggle('show-text');
+//     });
 // });
